@@ -1,6 +1,31 @@
 
 <?php
 
+    function loadall_product(){
+        //SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+
+        //SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName FROM ((Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID) INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);
+
+        // $sql =  "select 
+        // product_detail.id, product.name_product, category.name_cate, product.detail_product  
+        // from product_detail 
+        // inner join product on product_detail.id_pdt = product.id 
+        // inner join category on category.id = product.id_cate
+        // inner join size on size.id = product_detail.id_size 
+        // inner join color on color.id = product_detail.id_color 
+        // inner join material on material.id = product_detail.id_material  
+        // ";
+
+        $sql =  "select 
+        product.id, product.name_product, category.name_cate, product.img_pdt, product.detail_product  
+        from product
+        inner join category on category.id = product.id_cate
+        order by product.id asc";
+        $listsanpham=pdo_query($sql);
+        return $listsanpham;  
+        
+    }
+
     function insert_sanpham($id_cate,$name_product,$detail_product) {
         $sql="insert into product(id_cate, name_product, detail_product) 
         values($id_cate,'$name_product', '$detail_product')";

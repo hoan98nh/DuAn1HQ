@@ -84,16 +84,18 @@
                 
             case 'listsp':
             // load tất cả dữ liệu lên
-                if(isset($_POST['listok'])&&($_POST['listok'])) { 
-                    $kyw=$_POST['kyw'];
-                    $iddm=$_POST['iddm'];
+                // if(isset($_POST['listok'])&&($_POST['listok'])) { 
+                //     $kyw=$_POST['kyw'];
+                //     $iddm=$_POST['iddm'];
                 
-                } else {
-                    $kyw='';
-                    $iddm=0;
-                }
-                $listdanhmuc=loadall_danhmuc();
-                $listsanpham=loadall_sanpham($kyw,$iddm);
+                // } else {
+                //     $kyw='';
+                //     $iddm=0;
+                // }
+                // $listdanhmuc=loadall_danhmuc();
+                // $listsanpham=loadall_sanpham($kyw,$iddm);
+
+                $listsanpham = loadall_product();
 
             include "sanpham/list.php";
             break;
