@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 08, 2024 at 08:18 AM
+-- Generation Time: Jul 08, 2024 at 10:22 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -152,7 +152,8 @@ DROP TABLE IF EXISTS `product`;
 CREATE TABLE IF NOT EXISTS `product` (
   `id` int NOT NULL AUTO_INCREMENT,
   `id_cate` int NOT NULL,
-  `name_product` text COLLATE utf8mb4_general_ci NOT NULL,
+  `name_product` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `img_pdt` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `detail_product` text COLLATE utf8mb4_general_ci NOT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
@@ -163,9 +164,9 @@ CREATE TABLE IF NOT EXISTS `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `id_cate`, `name_product`, `detail_product`, `status`) VALUES
-(1, 1, 'NHẪN VÀNG VÀNG 14K GẮN ĐÁ CZ DOJI AFRJ000127F1CZ1', 'Tất cả các sản phẩm của DOJI được kiểm định chặt chẽ với máy quang phổ, cam kết chuẩn xác hàm lượng vàng. Các sản phẩm trang sức kim cương, đá quý/đá bán quý, ngọc/ngọc trai đều có đầy đủ kiểm định uy tín đi kèm.\r\n', 1),
-(2, 2, 'HOA TAI VÀNG TRẮNG 14K GẮN ĐÁ CZ DOJI AFEK000503F2CZ1\r\n', 'Mẫu mã, kiểu dáng sản phẩm đa dạng, phù hợp với nhiều đối tượng và sự kiện khác nhau.\r\n', 1);
+INSERT INTO `product` (`id`, `id_cate`, `name_product`, `img_pdt`, `detail_product`, `status`) VALUES
+(1, 1, 'NHẪN VÀNG VÀNG 14K GẮN ĐÁ CZ DOJI AFRJ000127F1CZ1', 'hinh 1', 'Tất cả các sản phẩm của DOJI được kiểm định chặt chẽ với máy quang phổ, cam kết chuẩn xác hàm lượng vàng. Các sản phẩm trang sức kim cương, đá quý/đá bán quý, ngọc/ngọc trai đều có đầy đủ kiểm định uy tín đi kèm.\r\n', 1),
+(2, 2, 'HOA TAI VÀNG TRẮNG 14K GẮN ĐÁ CZ DOJI AFEK000503F2CZ1\r\n', 'hinh 2', 'Mẫu mã, kiểu dáng sản phẩm đa dạng, phù hợp với nhiều đối tượng và sự kiện khác nhau.\r\n', 1);
 
 -- --------------------------------------------------------
 
