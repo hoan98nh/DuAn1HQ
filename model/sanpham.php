@@ -17,7 +17,7 @@
         // ";
 
         $sql =  "select 
-        product.id, product.name_product, category.name_cate, product.detail_product  
+        product.id, product.name_product, category.name_cate, product.img_pdt, product.detail_product  
         from product
         inner join category on category.id = product.id_cate
         order by product.id asc";
