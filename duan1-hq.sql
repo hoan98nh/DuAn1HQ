@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 30, 2024 at 10:01 AM
+-- Generation Time: Jul 08, 2024 at 08:18 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `name_cate` text COLLATE utf8mb4_general_ci NOT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `category`
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `color` (
   `name_color` text COLLATE utf8mb4_general_ci NOT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `color`
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `material` (
   `name_material` text COLLATE utf8mb4_general_ci NOT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `material`
@@ -103,8 +103,9 @@ CREATE TABLE IF NOT EXISTS `order_client` (
   `payment` text COLLATE utf8mb4_general_ci NOT NULL,
   `ship` text COLLATE utf8mb4_general_ci NOT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  PRIMARY KEY (`id`),
+  KEY `lk__order_user` (`id_user`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `order_client`
@@ -127,8 +128,10 @@ CREATE TABLE IF NOT EXISTS `order_client_detail` (
   `id_product` int NOT NULL,
   `quantity` int NOT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  PRIMARY KEY (`id`),
+  KEY `lk_order-detail_order` (`id_order`),
+  KEY `lk_order-detail_pdt` (`id_product`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `order_client_detail`
@@ -150,19 +153,19 @@ CREATE TABLE IF NOT EXISTS `product` (
   `id` int NOT NULL AUTO_INCREMENT,
   `id_cate` int NOT NULL,
   `name_product` text COLLATE utf8mb4_general_ci NOT NULL,
-  `image_product` text COLLATE utf8mb4_general_ci NOT NULL,
   `detail_product` text COLLATE utf8mb4_general_ci NOT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  PRIMARY KEY (`id`),
+  KEY `lk_pdt_category` (`id_cate`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `id_cate`, `name_product`, `image_product`, `detail_product`, `status`) VALUES
-(1, 1, 'NHẪN VÀNG VÀNG 14K GẮN ĐÁ CZ DOJI AFRJ000127F1CZ1', 'hinhdemo', 'Tất cả các sản phẩm của DOJI được kiểm định chặt chẽ với máy quang phổ, cam kết chuẩn xác hàm lượng vàng. Các sản phẩm trang sức kim cương, đá quý/đá bán quý, ngọc/ngọc trai đều có đầy đủ kiểm định uy tín đi kèm.\r\n', 1),
-(2, 2, 'HOA TAI VÀNG TRẮNG 14K GẮN ĐÁ CZ DOJI AFEK000503F2CZ1\r\n', 'hinh', 'Mẫu mã, kiểu dáng sản phẩm đa dạng, phù hợp với nhiều đối tượng và sự kiện khác nhau.\r\n', 1);
+INSERT INTO `product` (`id`, `id_cate`, `name_product`, `detail_product`, `status`) VALUES
+(1, 1, 'NHẪN VÀNG VÀNG 14K GẮN ĐÁ CZ DOJI AFRJ000127F1CZ1', 'Tất cả các sản phẩm của DOJI được kiểm định chặt chẽ với máy quang phổ, cam kết chuẩn xác hàm lượng vàng. Các sản phẩm trang sức kim cương, đá quý/đá bán quý, ngọc/ngọc trai đều có đầy đủ kiểm định uy tín đi kèm.\r\n', 1),
+(2, 2, 'HOA TAI VÀNG TRẮNG 14K GẮN ĐÁ CZ DOJI AFEK000503F2CZ1\r\n', 'Mẫu mã, kiểu dáng sản phẩm đa dạng, phù hợp với nhiều đối tượng và sự kiện khác nhau.\r\n', 1);
 
 -- --------------------------------------------------------
 
@@ -181,8 +184,12 @@ CREATE TABLE IF NOT EXISTS `product_detail` (
   `quantity` int NOT NULL,
   `price` decimal(10,0) NOT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  PRIMARY KEY (`id`),
+  KEY `lk_pdt-detail_color` (`id_color`),
+  KEY `lk_pdt-detail_material` (`id_material`),
+  KEY `lk_pdt-detail_pdt` (`id_pdt`),
+  KEY `lk_pdt-detail_size` (`id_size`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `product_detail`
@@ -204,7 +211,7 @@ CREATE TABLE IF NOT EXISTS `role` (
   `name_role` text COLLATE utf8mb4_general_ci NOT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `role`
@@ -226,7 +233,7 @@ CREATE TABLE IF NOT EXISTS `size` (
   `name_size` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `size`
@@ -252,8 +259,9 @@ CREATE TABLE IF NOT EXISTS `user` (
   `phone_number` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
   `id_role` int NOT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  PRIMARY KEY (`id`),
+  KEY `lk__user_role` (`id_role`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
@@ -262,6 +270,44 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `address`, `phone_number`, `id_role`, `status`) VALUES
 (1, 'admin', '123456', 'admin@mail.com', '', '', 1, 1),
 (2, 'userdemo1', '1234', 'userdemo@mail.com', '', '', 2, 1);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `order_client`
+--
+ALTER TABLE `order_client`
+  ADD CONSTRAINT `lk__order_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Constraints for table `order_client_detail`
+--
+ALTER TABLE `order_client_detail`
+  ADD CONSTRAINT `lk_order-detail_order` FOREIGN KEY (`id_order`) REFERENCES `order_client` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `lk_order-detail_pdt` FOREIGN KEY (`id_product`) REFERENCES `product` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Constraints for table `product`
+--
+ALTER TABLE `product`
+  ADD CONSTRAINT `lk_pdt_category` FOREIGN KEY (`id_cate`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Constraints for table `product_detail`
+--
+ALTER TABLE `product_detail`
+  ADD CONSTRAINT `lk_pdt-detail_color` FOREIGN KEY (`id_color`) REFERENCES `color` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `lk_pdt-detail_material` FOREIGN KEY (`id_material`) REFERENCES `material` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `lk_pdt-detail_pdt` FOREIGN KEY (`id_pdt`) REFERENCES `product` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `lk_pdt-detail_size` FOREIGN KEY (`id_size`) REFERENCES `size` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `lk__user_role` FOREIGN KEY (`id_role`) REFERENCES `role` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
