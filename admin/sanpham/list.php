@@ -1,4 +1,4 @@
-<div class="container">
+<div class="row">
     <div class=" frmtitle mb">
         <H1>DANH SÁCH LOẠI HÀNG</H1>
     </div>
