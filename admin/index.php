@@ -18,42 +18,42 @@ if (isset($_GET['act'])) {
 
         case 'adddm':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                $tenloai = $_POST['tenloai'];
-                insert_danhmuc($tenloai);
-                $thongbao = "Them thanh cong";
+                $name_cate = $_POST['name_cate'];
+                insert_category($name_cate);
+                $thongbao = "Thêm thành công";
             }
             include "danhmuc/add.php";
             break;
 
         case 'lisdm':
-            $listdanhmuc = loadall_danhmuc();
+            $listdanhmuc = loadall_category();
             include "danhmuc/list.php";
             break;
 
         case 'xoadm':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                delete_danhmuc($_GET['id']);
+                delete_category($_GET['id']);
             }
-            $listdanhmuc = loadall_danhmuc();
+            $listdanhmuc = loadall_category();
             include "danhmuc/list.php";
             break;
 
         case 'suadm':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                $dm = loadone_danhmuc($_GET['id']);
+                $dm = loadone_category($_GET['id']);
             }
             include "danhmuc/update.php";
             break;
 
         case 'updatedm':
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                $tenloai = $_POST['tenloai'];
+                $name_cate = $_POST['name_cate'];
                 $id = $_POST['id'];
-                $sql = "update danhmuc set name='" . $tenloai . "' where id=" . $id;
+                $sql = "update category set name='" . $name_cate. "' where id=" . $id;
                 pdo_execute($sql);
                 $thongbao = "Cập nhật thành công";
             }
-            $sql = "select * from danhmuc order by id desc";
+            $sql = "select * from category order by id desc";
             $listdanhmuc = pdo_query($sql);
             include "danhmuc/list.php";
             break;
