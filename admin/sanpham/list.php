@@ -69,8 +69,8 @@
                             <td><?= $name_cate ?></td>
                             <td><?= $hinh ?></td>
                             <td><?= $detail_product ?></td>
-                            <td><a href="' . $suasp . '"><input type="button" value="Sửa"></a> <a href="' . $xoasp . '"><input type="button" value="Xóa"></a></td>
-                            <td><a href="' . $suasp . '"><input type="button" value="Sửa"></a> <a href="' . $xoasp . '"><input type="button" value="Xóa"></a></td>
+                            <td><a href="' . $suasp . '"><input type="button" value="Sửa"></a></td>
+                            <td><a href="' . $xoasp . '"><input type="button" value="Xóa"></a></td>
                         </tr>
                     <?php
                     }
