@@ -1,30 +1,30 @@
 
 <?php
 
-    function insert_danhmuc($tenloai){
-        $sql="insert into danhmuc(name)values('$tenloai')";
+    function insert_category($name_cate){
+        $sql="insert into category(name_cate)values('$name_cate')";
         pdo_execute($sql);  
     }
 
-    function delete_danhmuc($id){
-        $sql ="delete  from danhmuc where id = ".$id;
+    function delete_category($id){
+        $sql ="delete  from category where id = ".$id;
         pdo_execute($sql);
     }
 
-    function loadall_danhmuc(){
-        $sql =" select * from danhmuc order  by id desc";
+    function loadall_category(){
+        $sql =" select id, name_cate from category";
         $listdanhmuc=pdo_query($sql);
         return $listdanhmuc;
     }
 
-    function loadone_danhmuc($id){
-        $sql ="select * from danhmuc where id = ".$id;
+    function loadone_category($id){
+        $sql ="select * from category where id = ".$id;
         $dm=pdo_query_one($sql);
         return $dm;
     }
 
-    function update_danhmuc($id,$tenloai){
-        $sql="update danhmuc set name='".$tenloai."' when id=".$id;
+    function update_category($id,$name_cate){
+        $sql="update category set name='".$name_cate."' when id=".$id;
         pdo_execute($sql);
     }
 

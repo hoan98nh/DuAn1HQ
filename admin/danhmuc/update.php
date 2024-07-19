@@ -17,16 +17,16 @@
         <form action="index.php?act=updatedm" method="post">
 
         <div class="row mb10">
-            Mã loại <br>
-        <input type="text" name="maloai" disabled>
+            id <br>
+        <input type="text" name="id" disabled>
         </div>
 
         <div class="row mb10">
-            Tên loại <br>
-        <input type="text" name="tenloai" value="<?php if(isset($name)&&($name!="")) echo $name ;?>">
+            name_cate <br>
+        <input type="text" name="name_cate" value="<?php if(isset($name_cate)&&($name_cate!="")) echo $name_cate ;?>">
         </div>
 
-        <div class="row mb10">
+        <div class="">
         <input type="hidden" name="id"  value="<?php if(isset($id)&&($id>0)) echo $id ;?>">
         <input type="submit" name="capnhat" value="CẬP NHẬT">
         <input type="reset" value="NHẬP LẠI">

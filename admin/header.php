@@ -42,7 +42,7 @@
     <title>Modernize Free</title>
     <link rel="shortcut icon" type="image/png" href="./assets/images/logos/favicon.png" />
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
-    <link rel='stylesheet' type='text/css' href='../view/css/style.css'>
+    <!--<link rel='stylesheet' type='text/css' href='../view/css/style.css'>-->
     <script src='main.js'></script>
 </head>
 
