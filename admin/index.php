@@ -6,6 +6,7 @@ include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
 include "../model/binhluan.php";
+include "../model/singeletable.php";
 include "header.php";
 
 // body
@@ -57,7 +58,78 @@ if (isset($_GET['act'])) {
             include "danhmuc/list.php";
             break;
 
+            // Màu sắc listcolor
+        case 'addcolor':
+            $urladd = "addcolor";
+            $titletable = "màu";
+            $urlactlist = "listcolor";
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $ten = $_POST['name'];
+                insert_forsingletable("color", "name_color", $ten);
+                $thongbao = "Them thanh cong";
+            }
+            include "./singeletable/add.php";
+            break;
 
+        case 'listcolor':
+            $titletable = "màu";
+            $listcol =  showcolumn("color");
+            $n_table = "color";
+            $urladd = "addcolor";
+            $listforsingletable = loadall_forsingletable("color");
+            include "./singeletable/list.php";
+            break;
+
+        case 'xoacolor':
+
+            // khai báo
+            $titletable = "màu";
+            $listcol =  showcolumn("color");
+            $n_table = "color";
+            $urladd = "addcolor";
+
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_forsingletable("color", $_GET['id']);
+            }
+            $listforsingletable = loadall_forsingletable("color");
+            include "./singeletable/list.php";
+            break;
+
+        case 'suacolor':
+            // khai báo
+            $titletable = "màu";
+            $n_table = "color";
+            $one_col = "name_color";
+            $urlactlist = "listcolor";
+            $urlupdate = "updatecolor";
+
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $onecall = loadone_forsingletable("color", $_GET['id']);
+            }
+            include "./singeletable/update.php";
+            break;
+
+        case 'updatecolor':
+            // khai báo
+            $titletable = "màu";
+            $listcol =  showcolumn("color");
+            $n_table = "color";
+            $urladd = "addcolor";
+            $listforsingletable = loadall_forsingletable("color");
+            $colname = "name_color";
+
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $name = $_POST['name'];
+                $id = $_POST['id'];
+                // $sql = "update danhmuc set name='" . $tenloai . "' where id=" . $id;
+                // pdo_execute($sql);
+                $update = update_forsingletable("color", $colname, $name, $id);
+                $thongbao = "Cập nhật thành công";
+            }
+            $listforsingletable = loadall_forsingletable("color");
+            include "./singeletable/list.php";
+            break;
+            
             /*SAN PHAM */
         case 'addsp':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {

@@ -1,38 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Admin</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='../view/css/style.css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/images/logos/favicon.png" />
-    <link rel="stylesheet" href="./assets/css/styles.min.css" />
-    <script src='main.js'></script>
-</head>
-
-<body>
-    <div class="container">
-
-        <div class=" mb headeradmin">
-            <h1>Admin</h1>
-        </div>
-
-        <div class=" mb menu">
-            <ul>
-                <li><a href="index.php">Trang chủ</a></li>
-                <li><a href="index.php?act=adddm">Danh mục</a></li>
-                <li><a href="index.php?act=listsp">Hàng hóa</a></li>
-                <li><a href="index.php?act=dskh">Khách hàng</a></li>
-                <li><a href="index.php?act=dsbl">Bình luận</a></li>
-                <li><a href="index.php?act=thongke">Thống kê</a></li>
-            </ul>
-        </div>
-    </div> -->
-
-
-<!-- check -->
-
 <!doctype html>
 <html lang="en">
 
@@ -82,6 +47,30 @@
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
                                 <span class="hide-menu">Danh mục</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="index.php?act=listcolor" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-layout-dashboard"></i>
+                                </span>
+                                <span class="hide-menu">Màu sắc</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="index.php?act=listsp" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-layout-dashboard"></i>
+                                </span>
+                                <span class="hide-menu">Nguyên liệu</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="index.php?act=listsp" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-layout-dashboard"></i>
+                                </span>
+                                <span class="hide-menu">Size</span>
                             </a>
                         </li>
                         <li class="sidebar-item">

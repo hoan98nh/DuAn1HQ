@@ -26,7 +26,7 @@
                     <a href="index.php?act=addsp" class="btn btn-primary m-1">Thêm sản phẩm mới</a>
                 </div>
             </div>
-
+            <!-- table -->
             <div class="">
 
                 <table class="table table-bordered">

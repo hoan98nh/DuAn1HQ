@@ -1,31 +1,41 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row ">
+            <div class="">
+                <h1 class="text-uppercase">THÊM MỚI <?php if (isset($titletable) && ($titletable != "")) echo $titletable; ?></h1>
+            </div>
+            <div class="">
+                <form action="index.php?act=<?php if (isset($urladd) && ($urladd != "")) echo $urladd; ?>" method="post">
 
-<div class="row ">
-    <div class="row frmtitle">
-        <h1>THÊM MỚI <?php if (isset($titletable)&& ($titletable!=""))echo $titletable; ?></h1>
-    </div>
-    <div class="row frmcontent">
-    <form action="index.php?act=adddm" method="post">
+                    <div class="row mb10">
+                        Mã <br>
+                        <input type="text" name="id" disabled>
+                    </div>
 
-        <div class="row mb10">
-            Mã loại <br>
-        <input type="text" name="maloai" disabled>
+                    <div class="row">
+                        Tên <br>
+                        <input type="text" name="name">
+                    </div>
+
+                    <div class="row flex">
+                        <input class="btn btn-primary m-1 w-25" type="submit" name="themmoi" value="THÊM MỚI">
+                        <!-- <input type="reset" value="NHẬP LẠI"> -->
+                        <a class="btn btn-primary m-1 w-25" href="index.php?act=<?php if (isset($urlactlist) && ($urlactlist != "")) echo $urlactlist; ?>">DANH SÁCH</a>
+                    </div>
+
+
+                </form>
+                <?php
+                if (isset($thongbao) && ($thongbao != "")) {
+                ?>
+                    <div class="row alert alert-success" role="alert">
+                        <?=$thongbao?>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
         </div>
-                    
-        <div class="row mb10">
-            Tên loại <br>
-            <input type="text" name="tenloai">
-        </div>
 
-        <div class="row mb10">
-            <input type="submit" name="themmoi"  value="THÊM MỚI">
-            <input type="reset" value="NHẬP LẠI">
-            <a href="index.php?act=lisdm"><input type="button" value="DANH SÁCH"></a>
-        </div>
-
-        <?php
-        if (isset($thongbao)&& ($thongbao!=""))echo $thongbao;
-        ?>
-                    
-    </form>
     </div>
 </div>
