@@ -30,16 +30,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Untree.co">
-    <link rel="shortcut icon" href="../theme/furni-1.0.0/favicon.png">
+    <link rel="shortcut icon" href="./theme/furni-1.0.0/favicon.png">
 
     <meta name="description" content="" />
     <meta name="keywords" content="bootstrap, bootstrap4" />
 
     <!-- Bootstrap CSS -->
-    <link href="../view/asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./view/asset/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="../view/asset/css/tiny-slider.css" rel="stylesheet">
-    <link href="../view/asset/css/style.css" rel="stylesheet">
+    <link href="./view/asset/css/tiny-slider.css" rel="stylesheet">
+    <link href="./view/asset/css/style.css" rel="stylesheet">
     <title>Trang sức HQ</title>
 </head>
 
@@ -49,7 +49,7 @@
     <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="../theme/logohq.PNG"></a>
+            <a class="navbar-brand" href="index.html"><img src="./theme/logohq.PNG"></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -58,18 +58,18 @@
             <div class="collapse navbar-collapse" id="navbarsFurni">
                 <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="../view/header.php">Home</a>
+                        <a class="nav-link" href="./view/header.php">Home</a>
                     </li>
-                    <li><a class="nav-link" href="../view/shop.php">Shop</a></li>
+                    <li><a class="nav-link" href="./view/shop.php">Shop</a></li>
                     <li><a class="nav-link" href="about.html">About us</a></li>
                     <li><a class="nav-link" href="services.html">Services</a></li>
                     <li><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li><a class="nav-link" href="../view/contact.php">Contact us</a></li>
+                    <li><a class="nav-link" href="./view/contact.php">Contact us</a></li>
                 </ul>
 
                 <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                    <li><a class="nav-link" href="#"><img src="../view/asset/images/user.svg"></a></li>
-                    <li><a class="nav-link" href="cart.html"><img src="../view/asset/images/cart.svg"></a></li>
+                    <li><a class="nav-link" href="#"><img src="./view/asset/images/user.svg"></a></li>
+                    <li><a class="nav-link" href="cart.html"><img src="./view/asset/images/cart.svg"></a></li>
                 </ul>
             </div>
         </div>
@@ -89,7 +89,7 @@
 						</div>
 						<div class="col-lg-7">
 							<div class="hero-img-wrap">
-								<img src="../theme/BIa123.png" class="img-fluid">
+								<img src="./theme/BIa123.png" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -113,12 +113,12 @@
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="../theme/nhan1.png" class="img-fluid product-thumbnail">
+							<img src="./theme/nhan1.png" class="img-fluid product-thumbnail">
 							<h3 class="product-title">Nhẫn Kim cương Vàng trắng 14K</h3>
 							<strong class="product-price">$50.00</strong>
 
 							<span class="icon-cross">
-								<img src="../view/asset/images/cross.svg" class="img-fluid">
+								<img src="./view/asset/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div> 
@@ -127,12 +127,12 @@
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="../theme/nhan2.png" class="img-fluid product-thumbnail">
+							<img src="./theme/nhan2.png" class="img-fluid product-thumbnail">
 							<h3 class="product-title">Nhẫn cưới Kim cương Vàng Trắng 14K</h3>
 							<strong class="product-price">$78.00</strong>
 
 							<span class="icon-cross">
-								<img src="../view/asset/images/cross.svg" class="img-fluid">
+								<img src="./view/asset/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -141,12 +141,12 @@
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="../theme/nhan3.png" class="img-fluid product-thumbnail">
+							<img src="./theme/nhan3.png" class="img-fluid product-thumbnail">
 							<h3 class="product-title">Nhẫn Kim cương Vàng trắng 14K</h3>
 							<strong class="product-price">$43.00</strong>
 
 							<span class="icon-cross">
-								<img src="../view/asset/images/cross.svg" class="img-fluid">
+								<img src="./view/asset/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -170,7 +170,7 @@
 							<div class="col-6 col-md-6">
 								<div class="feature">
 									<div class="icon">
-										<img src="../view/asset/images/truck.svg" alt="Image" class="imf-fluid">
+										<img src="./view/asset/images/truck.svg" alt="Image" class="imf-fluid">
 									</div>
 									<h3>Vận chuyển nhanh &amp; Miễn phí </h3>
 									<p>Với dịch vụ vận chuyển nhanh và miễn phí của chúng tôi, bạn sẽ nhận được sản phẩm trong vòng 24 giờ sau khi đặt hàng, không phải trả thêm bất kỳ khoản phí vận chuyển nào.</p>
@@ -180,7 +180,7 @@
 							<div class="col-6 col-md-6">
 								<div class="feature">
 									<div class="icon">
-										<img src="../view/asset/images/bag.svg" alt="Image" class="imf-fluid">
+										<img src="./view/asset/images/bag.svg" alt="Image" class="imf-fluid">
 									</div>
 									<h3>Dễ dàng mua sắm</h3>
 									<p>Quá trình mua sắm cũng trở nên dễ dàng hơn bao giờ hết, mang lại trải nghiệm tuyệt vời cho khách hàng.</p>
@@ -190,7 +190,7 @@
 							<div class="col-6 col-md-6">
 								<div class="feature">
 									<div class="icon">
-										<img src="../view/asset/images/support.svg" alt="Image" class="imf-fluid">
+										<img src="./view/asset/images/support.svg" alt="Image" class="imf-fluid">
 									</div>
 									<h3>Hỗ trợ tư vấn 24/7 </h3>
 									<p>Đội ngũ chăm sóc khách hàng chuyên nghiệp. Nếu có bất kỳ thắc mắc nào, chúng tôi luôn sẵn sàng hỗ trợ và tư vấn 24/7.</p>
@@ -200,7 +200,7 @@
 							<div class="col-6 col-md-6">
 								<div class="feature">
 									<div class="icon">
-										<img src="../view/asset/images/return.svg" alt="Image" class="imf-fluid">
+										<img src="./view/asset/images/return.svg" alt="Image" class="imf-fluid">
 									</div>
 									<h3>Trả lại miễn phí trong 7 ngày</h3>
 									<p>Và nếu bạn không hài lòng với sản phẩm, chúng tôi sẽ hỗ trợ đổi trả miễn phí trong vòng 7 ngày.</p>
@@ -212,7 +212,7 @@
 
 					<div class="col-lg-5">
 						<div class="img-wrap">
-							<img src="../theme/bia2.jpg" alt="Image" class="img-fluid">
+							<img src="./theme/bia2.jpg" alt="Image" class="img-fluid">
 						</div>
 					</div>
 
@@ -227,9 +227,9 @@
 				<div class="row justify-content-between">
 					<div class="col-lg-7 mb-5 mb-lg-0">
 						<div class="imgs-grid">
-							<div class="grid grid-1"><img src="../theme/gir1.jpg" alt="Untree.co"></div>
-							<div class="grid grid-2"><img src="../theme/gir2.jpg" alt="Untree.co"></div>
-							<div class="grid grid-3"><img src="../theme/gir3.jpg" alt="Untree.co"></div>
+							<div class="grid grid-1"><img src="./theme/gir1.jpg" alt="Untree.co"></div>
+							<div class="grid grid-2"><img src="./theme/gir2.jpg" alt="Untree.co"></div>
+							<div class="grid grid-3"><img src="./theme/gir3.jpg" alt="Untree.co"></div>
 						</div>
 					</div>
 					<div class="col-lg-5 ps-lg-5">
@@ -257,7 +257,7 @@
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
-								<img src="../theme/nhan5.png" alt="Image" class="img-fluid">
+								<img src="./theme/nhan5.png" alt="Image" class="img-fluid">
 							</div>
 							<div class="pt-3">
 								<h3>Nhẫn Kim Cương</h3>
@@ -270,7 +270,7 @@
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
-								<img src="../theme/vong1.png" alt="Image" class="img-fluid">
+								<img src="./theme/vong1.png" alt="Image" class="img-fluid">
 							</div>
 							<div class="pt-3">
 								<h3>Bông Tai Kim Cương</h3>
@@ -284,7 +284,7 @@
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
-								<img src="../theme/hoatai1.png" alt="Image" class="img-fluid">
+								<img src="./theme/hoatai1.png" alt="Image" class="img-fluid">
 							</div>
 							<div class="pt-3">
 								<h3>Bông Tai Kim Cương</h3>
@@ -330,7 +330,7 @@
 
 												<div class="author-info">
 													<div class="author-pic">
-														<img src="../theme/furni-1.0.0/images/person_1.jpg" alt="Maria Jones" class="img-fluid">
+														<img src="./theme/furni-1.0.0/images/person_1.jpg" alt="Maria Jones" class="img-fluid">
 													</div>
 													<h3 class="font-weight-bold">Maria Jones</h3>
 													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
@@ -353,7 +353,7 @@
 
 												<div class="author-info">
 													<div class="author-pic">
-														<img src="../theme/furni-1.0.0/images/person_2.jpg" alt="Maria Jones" class="img-fluid">
+														<img src="./theme/furni-1.0.0/images/person_2.jpg" alt="Maria Jones" class="img-fluid">
 													</div>
 													<h3 class="font-weight-bold">Maria Jones</h3>
 													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
@@ -376,7 +376,7 @@
 
 												<div class="author-info">
 													<div class="author-pic">
-														<img src="../theme/furni-1.0.0/images/person_3.jpg" alt="Maria Jones" class="img-fluid">
+														<img src="./theme/furni-1.0.0/images/person_3.jpg" alt="Maria Jones" class="img-fluid">
 													</div>
 													<h3 class="font-weight-bold">Maria Jones</h3>
 													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
@@ -413,7 +413,7 @@
 
 					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
 						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="../theme/blog1.png" alt="Image" class="img-fluid"></a>
+							<a href="#" class="post-thumbnail"><img src="./theme/blog1.png" alt="Image" class="img-fluid"></a>
 							<div class="post-content-entry">
 								<h3><a href="#">First Time Home Owner Ideas</a></h3>
 								<div class="meta">
@@ -425,7 +425,7 @@
 
 					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
 						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="../theme/blog3.png" alt="Image" class="img-fluid"></a>
+							<a href="#" class="post-thumbnail"><img src="./theme/blog3.png" alt="Image" class="img-fluid"></a>
 							<div class="post-content-entry">
 								<h3><a href="#">How To Keep Your Furniture Clean</a></h3>
 								<div class="meta">
@@ -437,7 +437,7 @@
 
 					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
 						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="../theme/blog6.png" alt="Image" class="img-fluid"></a>
+							<a href="#" class="post-thumbnail"><img src="./theme/blog6.png" alt="Image" class="img-fluid"></a>
 							<div class="post-content-entry">
 								<h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
 								<div class="meta">
@@ -457,13 +457,13 @@
 			<div class="container relative">
 
 				<div class="sofa-img">
-					<img src="../theme/bia3.png" alt="Image" class="img-fluid">
+					<img src="./theme/bia3.png" alt="Image" class="img-fluid">
 				</div>
 
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="subscription-form">
-							<h3 class="d-flex align-items-center"><span class="me-1"><img src="../theme/furni-1.0.0/images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="./theme/furni-1.0.0/images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
 
 							<form action="#" class="row g-3">
 								<div class="col-auto">
@@ -485,7 +485,7 @@
 
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
-						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo"><img src="../theme/logohq.PNG"></a></div>
+						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo"><img src="./theme/logohq.PNG"></a></div>
 						<p class="mb-4">© 2017 Công Ty Cổ Phần Vàng Bạc Đá HQ 
 							<br>170E Phan Đăng Lưu, P.3, Q.Nam Từ Liêm, TP.Hà Nội
 							<br>ĐT: 028 39951703 - Fax: 028 3995 1702
@@ -560,9 +560,9 @@
 		<!-- End Footer Section -->	
 
 
-		<script src="../theme/furni-1.0.0/js/bootstrap.bundle.min.js"></script>
-		<script src="../theme/furni-1.0.0/js/tiny-slider.js"></script>
-		<script src="../theme/furni-1.0.0/js/custom.js"></script>
+		<script src="./theme/furni-1.0.0/js/bootstrap.bundle.min.js"></script>
+		<script src="./theme/furni-1.0.0/js/tiny-slider.js"></script>
+		<script src="./theme/furni-1.0.0/js/custom.js"></script>
 	</body>
 
 </html>
