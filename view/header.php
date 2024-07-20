@@ -69,7 +69,7 @@
 
                 <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                     <li><a class="nav-link" href="#"><img src="../view/asset/images/user.svg"></a></li>
-                    <li><a class="nav-link" href="cart.html"><img src="../view/asset/images/cart.svg"></a></li>
+                    <li><a class="nav-link" href="cart.php"><img src="../view/asset/images/cart.svg"></a></li>
                 </ul>
             </div>
         </div>
@@ -84,7 +84,7 @@
                         <div class="intro-excerpt">
 								<h1>Modern Jewelry <span clsas="d-block">Store</span></h1>
 								<p class="mb-4">Rất vui được đón tiếp quý khách đến với cửa hàng trang sức của chúng tôi. Tại đây, chúng tôi tự hào giới thiệu đến quý khách những sản phẩm trang sức cao cấp, độc đáo và được thiết kế tinh tế. Mời quý khách thoải mái tham quan và lựa chọn những món trang sức ưng ý.</p>
-								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+								<p><a href="" class="btn btn-secondary me-2">Mua ngay</a><a href="#" class="btn btn-white-outline">Xem thêm</a></p>
 							</div>
 						</div>
 						<div class="col-lg-7">
@@ -106,7 +106,7 @@
 					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
 						<h2 class="mb-4 section-title">Được chế tạo bằng vật liệu tuyệt vời.</h2>
 						<p class="mb-4">Với tất cả tâm huyết và khát vọng về một kỷ nguyên cách tân trang sức Việt, thương hiệu HQ không chỉ là chuỗi cửa hàng kinh doanh mà còn là nơi kiến tạo ra hàng ngàn kiểu mẫu trang sức. </p>
-						<p><a href="shop.html" class="btn">Explore</a></p>
+						<p><a href="../view/shop.php" class="btn">Xem thêm</a></p>
 					</div> 
 					<!-- End Column 1 -->
 
@@ -242,7 +242,7 @@
 							<li>Chúng tôi cam kết mang đến trải nghiệm mua sắm trang sức hoàn hảo cho khách hàng</li>
 							<li>Khách hàng sẽ được tư vấn tận tình và hỗ trợ trong suốt quá trình mua sắm</li>
 						</ul>
-						<p><a herf="#" class="btn">Explore</a></p>
+						<p><a href="../view/shop.php" class="btn">Xem thêm</a></p>
 					</div>
 				</div>
 			</div>
@@ -405,7 +405,7 @@
 						<h2 class="section-title">Blog gần đây</h2>
 					</div>
 					<div class="col-md-6 text-start text-md-end">
-						<a href="#" class="more">View All Posts</a>
+						<a href="#" class="more">Xem tất cả bài viết</a>
 					</div>
 				</div>
 
@@ -415,7 +415,7 @@
 						<div class="post-entry">
 							<a href="#" class="post-thumbnail"><img src="../theme/blog1.png" alt="Image" class="img-fluid"></a>
 							<div class="post-content-entry">
-								<h3><a href="#">First Time Home Owner Ideas</a></h3>
+								<h3><a href="#">Ý tưởng thiết kế nhẫn của</a></h3>
 								<div class="meta">
 									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19, 2021</a></span>
 								</div>
@@ -427,7 +427,7 @@
 						<div class="post-entry">
 							<a href="#" class="post-thumbnail"><img src="../theme/blog3.png" alt="Image" class="img-fluid"></a>
 							<div class="post-content-entry">
-								<h3><a href="#">How To Keep Your Furniture Clean</a></h3>
+								<h3><a href="#">Ý tưởng thiết kế nhẫn mùa xuân của</a></h3>
 								<div class="meta">
 									<span>by <a href="#">Robert Fox</a></span> <span>on <a href="#">Dec 15, 2021</a></span>
 								</div>
@@ -439,7 +439,7 @@
 						<div class="post-entry">
 							<a href="#" class="post-thumbnail"><img src="../theme/blog6.png" alt="Image" class="img-fluid"></a>
 							<div class="post-content-entry">
-								<h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
+								<h3><a href="#">Ý tưởng thiết kế nhẫn mùa hạ của</a></h3>
 								<div class="meta">
 									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 12, 2021</a></span>
 								</div>
@@ -463,14 +463,15 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="subscription-form">
-							<h3 class="d-flex align-items-center"><span class="me-1"><img src="../theme/furni-1.0.0/images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="../theme/furni-1.0.0/images/envelope-outline.svg" 
+							alt="Image" class="img-fluid"></span><span>Đăng ký</span></h3>
 
 							<form action="#" class="row g-3">
 								<div class="col-auto">
-									<input type="text" class="form-control" placeholder="Enter your name">
+									<input type="text" class="form-control" placeholder="Nhập tên của bạn">
 								</div>
 								<div class="col-auto">
-									<input type="email" class="form-control" placeholder="Enter your email">
+									<input type="email" class="form-control" placeholder="Nhập email của bạn">
 								</div>
 								<div class="col-auto">
 									<button class="btn btn-primary">
@@ -541,14 +542,13 @@
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
-            </p>
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script><!--. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ --></p>
 						</div>
 
 						<div class="col-lg-6 text-center text-lg-end">
 							<ul class="list-unstyled d-inline-flex ms-auto">
-								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-								<li><a href="#">Privacy Policy</a></li>
+								<li class="me-4"><a href="#">Điều khoản &amp; Điều kiện</a></li>
+								<li><a href="#">Chính sách bảo mật</a></li>
 							</ul>
 						</div>
 
