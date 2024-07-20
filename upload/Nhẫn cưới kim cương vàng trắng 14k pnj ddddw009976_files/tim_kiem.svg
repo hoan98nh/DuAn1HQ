@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="11" viewBox="0 0 11 11">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_246" data-name="Rectangle 246" width="11" height="11" transform="translate(4677 -44)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="tìm_kiếm" data-name="tìm kiếm" transform="translate(-4677 44)" clip-path="url(#clip-path)">
+    <g id="Group_300" data-name="Group 300" transform="matrix(0.985, -0.174, 0.174, 0.985, 4676.136, -42.02)">
+      <path id="Ellipse_1" data-name="Ellipse 1" d="M3.5-.6A4.047,4.047,0,0,1,7.6,3.381,4.047,4.047,0,0,1,3.5,7.362,4.047,4.047,0,0,1-.6,3.381,4.047,4.047,0,0,1,3.5-.6Zm0,6.768A2.848,2.848,0,0,0,6.4,3.381,2.848,2.848,0,0,0,3.5.595,2.848,2.848,0,0,0,.6,3.381,2.848,2.848,0,0,0,3.5,6.168Z" transform="translate(3.761 0)" fill="red"/>
+      <path id="Path_334" data-name="Path 334" d="M.146,3.656A.6.6,0,0,1-.35,3.4a.594.594,0,0,1,.156-.829L4.048-.321a.6.6,0,0,1,.834.155.594.594,0,0,1-.156.829L.484,3.552A.6.6,0,0,1,.146,3.656Z" transform="translate(0 5.5)" fill="red"/>
+    </g>
+  </g>
+</svg>
