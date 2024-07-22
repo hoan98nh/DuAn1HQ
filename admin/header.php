@@ -58,7 +58,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="index.php?act=listsp" aria-expanded="false">
+                            <a class="sidebar-link" href="index.php?act=listmaterial" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
@@ -66,7 +66,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="index.php?act=listsp" aria-expanded="false">
+                            <a class="sidebar-link" href="index.php?act=listsize" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
