@@ -21,7 +21,7 @@
                 <div class="row flex">
                     <input class="btn btn-primary m-1 w-25" type="submit" name="themmoi" value="THÊM MỚI">
                     <!-- <input type="reset" value="NHẬP LẠI"> -->
-                    <a class="btn btn-primary m-1 w-25" href="index.php?act=lisdm<?php if (isset($urlactlist) && ($urlactlist != "")) echo $urlactlist; ?>">DANH SÁCH</a>
+                    <a class="btn btn-primary m-1 w-25" href="index.php?act=listdm<?php if (isset($urlactlist) && ($urlactlist != "")) echo $urlactlist; ?>">DANH SÁCH</a>
                     </div>
                 </div>
 
