@@ -25,7 +25,7 @@ if (isset($_GET['act'])) {
             include "danhmuc/add.php";
             break;
 
-        case 'lisdm':
+        case 'listdm':
             $listdanhmuc = loadall_category();
             include "danhmuc/list.php";
             break;
@@ -287,8 +287,8 @@ if (isset($_GET['act'])) {
             break;
             // end
 
-            /*SAN PHAM */
-        case 'addsp':
+/*SAN PHAM */
+            case 'addsp':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $iddm = $_POST['iddm'];
                 $tensp = $_POST['tensp'];
@@ -308,7 +308,7 @@ if (isset($_GET['act'])) {
                 $thongbao = "Them thanh cong";
             }
 
-            $listdanhmuc = loadall_danhmuc();
+            $listdanhmuc = loadall_category();
             include "sanpham/add.php";
             break;
 
