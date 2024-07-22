@@ -44,7 +44,7 @@
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                     <li><a class="nav-link" href="#"><img src="../view/asset/images/user.svg"></a></li>
-                    <li><a class="nav-link" href="cart.html"><img src="../view/asset/images/cart.svg"></a></li>
+                    <li><a class="nav-link" href="../view/cart.php"><img src="../view/asset/images/cart.svg"></a></li>
                 </ul>
 				</div>
 			</div>
@@ -58,9 +58,9 @@
 					<div class="row justify-content-between">
 						<div class="col-lg-5">
 							<div class="intro-excerpt">
-								<h1>Modern Jewelry <span clsas="d-block">Store</span></h1>
+								<h1>Shop</h1>
 								<p class="mb-4">Rất vui được đón tiếp quý khách đến với cửa hàng trang sức của chúng tôi. Tại đây, chúng tôi tự hào giới thiệu đến quý khách những sản phẩm trang sức cao cấp, độc đáo và được thiết kế tinh tế. Mời quý khách thoải mái tham quan và lựa chọn những món trang sức ưng ý.</p>
-								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+								<p><a href="" class="btn btn-secondary me-2">Mua ngay</a><a href="#" class="btn btn-white-outline">Xem thêm</a></p>
 							</div>
 						</div>
 						<div class="col-lg-7">
@@ -248,6 +248,62 @@
 					</div>
 					<!-- End Column 4 -->
 
+					<!-- HANG 4-->
+					<div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="../theme/sp1.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Nhẫn Vàng 18K đính đá</h3>
+							<strong class="product-price">$50.00</strong>
+
+							<span class="icon-cross">
+								<img src="../view/asset/images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div> 
+					<!-- End Column 1 -->
+						
+					<!-- Start Column 2 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="../theme/sp2.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Nhẫn Vàng 18K đính đá</h3>
+							<strong class="product-price">$50.00</strong>
+
+							<span class="icon-cross">
+								<img src="../view/asset/images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div> 
+					<!-- End Column 2 -->
+
+					<!-- Start Column 3 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="../theme/sp3.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Nhẫn trắng 10K đính đá</h3>
+							<strong class="product-price">$78.00</strong>
+
+							<span class="icon-cross">
+								<img src="../view/asset/images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div>
+					<!-- End Column 3 -->
+
+					<!-- Start Column 4 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5">
+						<a class="product-item" href="#">
+							<img src="../theme/sp4.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Nhẫn Vàng trắng 10K đính đá</h3>
+							<strong class="product-price">$43.00</strong>
+
+							<span class="icon-cross">
+								<img src="../view/asset/images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div>
+					<!-- End Column 4 -->
+
 		      	</div>
 		    </div>
 		</div>
@@ -264,14 +320,15 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="subscription-form">
-                        <h3 class="d-flex align-items-center"><span class="me-1"><img src="../theme/furni-1.0.0/images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="../theme/furni-1.0.0/images/envelope-outline.svg" 
+							alt="Image" class="img-fluid"></span><span>Đăng ký</span></h3>
 
 							<form action="#" class="row g-3">
 								<div class="col-auto">
-									<input type="text" class="form-control" placeholder="Enter your name">
+									<input type="text" class="form-control" placeholder="Nhập tên của bạn">
 								</div>
 								<div class="col-auto">
-									<input type="email" class="form-control" placeholder="Enter your email">
+									<input type="email" class="form-control" placeholder="Nhập email của bạn">
 								</div>
 								<div class="col-auto">
 									<button class="btn btn-primary">
@@ -342,20 +399,18 @@
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a>  Distributed By <a href="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ -->
-            </p>
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script><!--. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ --></p>
 						</div>
 
 						<div class="col-lg-6 text-center text-lg-end">
 							<ul class="list-unstyled d-inline-flex ms-auto">
-								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-								<li><a href="#">Privacy Policy</a></li>
+								<li class="me-4"><a href="#">Điều khoản &amp; Điều kiện</a></li>
+								<li><a href="#">Chính sách bảo mật</a></li>
 							</ul>
 						</div>
 
 					</div>
 				</div>
-
 			</div>
 		</footer>
 		<!-- End Footer Section -->	
