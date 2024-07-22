@@ -8,12 +8,12 @@
             <div class="row frmcontent">
 
                 <div class="">
-                    <table class="table table-bordered">
+                    <table class="table table-striped">
                         <tr>
-
                         <th scope="col"></th>
                         <th scope="col">id</th>
                         <th scope="col">name_cate</th>
+                        <th scope="col">remove</th>
                         </tr>
 
                         <?php
@@ -33,13 +33,16 @@
                         
                     </table>
                 </div>
-
+                
                 <div class="">
-                    <input type="button" value="Chọn tất cả">
-                    <input type="button" value="Bỏ chọn tất cả">
-                    <input type="button" value="Xóa các mục đã chọn">
-                    <a href="index.php?act=adddm"><input type="button" value="Nhập thêm"></a>
+                <div class="row flex">
+                    <input class="btn btn-primary m-1 w-25" type="submit" name="themmoi" value="Chọn tất cả">
+                    <input class="btn btn-primary m-1 w-25" type="submit" name="themmoi" value="Xóa các mục đã chọn">
+                    <a class="btn btn-primary m-1 w-25" href="index.php?act=adddm<?php if (isset($urlactlist) && ($urlactlist != "")) echo $urlactlist; ?>">Nhập thêm</a>
+                    </div>
                 </div>
+
+                
 
             </div>
         </div>
