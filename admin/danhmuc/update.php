@@ -18,7 +18,7 @@
 
         <div class="row mb10">
             id <br>
-        <input type="text" name="id" disabled>
+        <input type="text" name="id" value="<?=$id?>" hidden>
         </div>
 
         <div class="row mb10">
