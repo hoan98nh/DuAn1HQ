@@ -49,7 +49,7 @@ if (isset($_GET['act'])) {
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $name_cate = $_POST['name_cate'];
                 $id = $_POST['id'];
-                $sql = "update category set name='" . $name_cate. "' where id=" . $id;
+                $sql = "update category set name='" . $name_cate . "' where id=" . $id;
                 pdo_execute($sql);
                 $thongbao = "Cập nhật thành công";
             }
@@ -129,7 +129,164 @@ if (isset($_GET['act'])) {
             $listforsingletable = loadall_forsingletable("color");
             include "./singeletable/list.php";
             break;
-            
+            // end
+
+            // material
+        case 'addmaterial':
+            // khai bao
+            $urladd = "addmaterial"; //act add
+            $titletable = "nguyên liệu"; //title hiển thị
+            $urlactlist = "listmaterial"; //act list
+
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $ten = $_POST['name'];
+                insert_forsingletable("material", "name_material", $ten);
+                $thongbao = "Them thanh cong";
+            }
+            include "./singeletable/add.php";
+            break;
+
+        case 'listmaterial':
+
+            // khai báo
+            $titletable = "nguyên liệu"; //title hiển thị
+            $listcol =  showcolumn("material"); //show col của table
+            $n_table = "material"; //tên bảng
+            $urladd = "addmaterial"; //act add
+
+            $listforsingletable = loadall_forsingletable("material");
+            include "./singeletable/list.php";
+            break;
+
+        case 'xoamaterial':
+
+            // khai báo
+            $titletable = "nguyên liệu"; //title hiển thị
+            $listcol =  showcolumn("material"); //show col của table
+            $n_table = "material"; //tên bảng
+            $urladd = "addmaterial"; //act add
+
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_forsingletable("material", $_GET['id']);
+            }
+            $listforsingletable = loadall_forsingletable("material");
+            include "./singeletable/list.php";
+            break;
+
+        case 'suamaterial':
+            // khai báo
+            $titletable = "nguyên liệu";
+            $n_table = "material";
+            $one_col = "name_material";
+            $urlactlist = "listmaterial";
+            $urlupdate = "updatematerial";
+
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $onecall = loadone_forsingletable("material", $_GET['id']);
+            }
+            include "./singeletable/update.php";
+            break;
+
+        case 'updatematerial':
+            // khai báo
+            $titletable = "nguyên liệu";
+            $listcol =  showcolumn("material");
+            $n_table = "material";
+            $urladd = "addmaterial";
+            $listforsingletable = loadall_forsingletable("material");
+            $colname = "name_material";
+
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $name = $_POST['name'];
+                $id = $_POST['id'];
+                // $sql = "update danhmuc set name='" . $tenloai . "' where id=" . $id;
+                // pdo_execute($sql);
+                $update = update_forsingletable("material", $colname, $name, $id);
+                $thongbao = "Cập nhật thành công";
+            }
+            $listforsingletable = loadall_forsingletable("material");
+            include "./singeletable/list.php";
+            break;
+            // end
+
+            // size
+        case 'addsize':
+            // khai bao
+            $urladd = "addsize"; //act add
+            $titletable = "kích cỡ"; //title hiển thị
+            $urlactlist = "listsize"; //act list
+
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $ten = $_POST['name'];
+                insert_forsingletable("size", "name_size", $ten);
+                $thongbao = "Them thanh cong";
+            }
+            include "./singeletable/add.php";
+            break;
+
+        case 'listsize':
+
+            // khai báo
+            $titletable = "kích cỡ"; //title hiển thị
+            $listcol =  showcolumn("size"); //show col của table
+            $n_table = "size"; //tên bảng
+            $urladd = "addsize"; //act add
+
+            $listforsingletable = loadall_forsingletable("size");
+            include "./singeletable/list.php";
+            break;
+
+        case 'xoasize':
+
+            // khai báo
+            $titletable = "kích cỡ"; //title hiển thị
+            $listcol =  showcolumn("size"); //show col của table
+            $n_table = "size"; //tên bảng
+            $urladd = "addsize"; //act add
+
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_forsingletable("size", $_GET['id']);
+            }
+            $listforsingletable = loadall_forsingletable("size");
+            include "./singeletable/list.php";
+            break;
+
+        case 'suasize':
+            // khai báo
+            $titletable = "kích cỡ";
+            $n_table = "size";
+            $one_col = "name_size";
+            $urlactlist = "listsize";
+            $urlupdate = "updatesize";
+
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $onecall = loadone_forsingletable("size", $_GET['id']);
+            }
+            include "./singeletable/update.php";
+            break;
+
+        case 'updatesize':
+            // khai báo
+            $titletable = "kích cỡ";
+            $listcol =  showcolumn("size");
+            $n_table = "size";
+            $urladd = "addsize";
+            $listforsingletable = loadall_forsingletable("size");
+            $colname = "name_size";
+
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $name = $_POST['name'];
+                $id = $_POST['id'];
+                // $sql = "update danhmuc set name='" . $tenloai . "' where id=" . $id;
+                // pdo_execute($sql);
+                $update = update_forsingletable("size", $colname, $name, $id);
+                $thongbao = "Cập nhật thành công";
+            }
+            $listforsingletable = loadall_forsingletable("size");
+            include "./singeletable/list.php";
+            break;
+            // end
+
             /*SAN PHAM */
         case 'addsp':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
