@@ -49,7 +49,7 @@ if (isset($_GET['act'])) {
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $name_cate = $_POST['name_cate'];
                 $id = $_POST['id'];
-                $sql = "update category set name='" . $name_cate . "' where id=" . $id;
+                $sql = "update category set name_cate ='" . $name_cate . "' where id=" . $id;
                 pdo_execute($sql);
                 $thongbao = "Cập nhật thành công";
             }
