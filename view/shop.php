@@ -30,7 +30,7 @@
 					<strong class="product-price">$50.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -44,7 +44,7 @@
 					<strong class="product-price">$50.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -58,7 +58,7 @@
 					<strong class="product-price">$78.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -72,7 +72,7 @@
 					<strong class="product-price">$43.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -87,7 +87,7 @@
 					<strong class="product-price">$50.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -101,7 +101,7 @@
 					<strong class="product-price">$50.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -115,7 +115,7 @@
 					<strong class="product-price">$78.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -129,7 +129,7 @@
 					<strong class="product-price">$43.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -143,7 +143,7 @@
 					<strong class="product-price">$50.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -157,7 +157,7 @@
 					<strong class="product-price">$50.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -171,7 +171,7 @@
 					<strong class="product-price">$78.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -185,7 +185,7 @@
 					<strong class="product-price">$43.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -199,7 +199,7 @@
 					<strong class="product-price">$50.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -213,7 +213,7 @@
 					<strong class="product-price">$50.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -227,7 +227,7 @@
 					<strong class="product-price">$78.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
@@ -241,7 +241,7 @@
 					<strong class="product-price">$43.00</strong>
 
 					<span class="icon-cross">
-						<img src="../view/asset/images/cross.svg" class="img-fluid">
+						<img src="./view/asset/images/cross.svg" class="img-fluid">
 					</span>
 				</a>
 			</div>
