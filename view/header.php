@@ -69,7 +69,7 @@
 
                 <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                     <li><a class="nav-link" href="#"><img src="./view/asset/images/user.svg"></a></li>
-                    <li><a class="nav-link" href="cart.php"><img src="./view/asset/images/cart.svg"></a></li>
+                    <li><a class="nav-link" href="index.php?act=cart"><img src="./view/asset/images/cart.svg"></a></li>
                 </ul>
             </div>
         </div>
