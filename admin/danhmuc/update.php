@@ -6,7 +6,8 @@
     }
 
 ?>
-
+<div class="card">
+<div class="card-body">
 <div class="row">
 
     <div class="row frmtitle">
@@ -28,9 +29,9 @@
 
         <div class="">
         <input type="hidden" name="id"  value="<?php if(isset($id)&&($id>0)) echo $id ;?>">
-        <input type="submit" name="capnhat" value="CẬP NHẬT">
-        <input type="reset" value="NHẬP LẠI">
-        <a href="index.php?act=lisdm"><input type="button" value="DANH SÁCH"></a>
+        <input class="btn btn-primary m-1 w-25" type="submit" name="capnhat" value="CẬP NHẬT">
+        <input class="btn btn-primary m-1 w-25" type="reset" value="NHẬP LẠI">
+        <a class="btn btn-primary m-1 w-25" href="index.php?act=listdm">DANH SÁCH </a>
         </div>
 
         <?php
@@ -39,4 +40,6 @@
         </form>
 
     </div>
+</div>
+</div>
 </div>
