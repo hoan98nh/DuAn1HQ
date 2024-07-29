@@ -24,10 +24,10 @@ if (is_array($onecall)) {
                     <input type="text" name="name" value="<?= $$one_col ?>">
                 </div>
 
-                <div class="row mb10">
-                    <input type="submit" name="capnhat" value="CẬP NHẬT">
-                    <input type="reset" value="NHẬP LẠI">
-                    <a href="index.php?act=<?php if (isset($urlactlist) && ($urlactlist != "")) echo $urlactlist; ?>"><input type="button" value="DANH SÁCH"></a>
+                <div class="">
+                    <input class="btn btn-primary m-1 w-25" type="submit" name="capnhat" value="CẬP NHẬT">
+                    <input class="btn btn-primary m-1 w-25" type="reset" value="NHẬP LẠI">
+                    <a class="btn btn-primary m-1 w-25" href="index.php?act=<?php if (isset($urlactlist) && ($urlactlist != "")) echo $urlactlist; ?>">DANH SÁCH</a>
                 </div>
 
                 <?php

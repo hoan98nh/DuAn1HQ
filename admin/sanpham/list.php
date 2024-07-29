@@ -1,6 +1,5 @@
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title fw-semibold mb-4">Sample Page</h5>
         <div class="row">
             <div class="mb">
                 <H1>DANH SÁCH LOẠI HÀNG</H1>
@@ -79,9 +78,9 @@
 
                 <div class="">
                     <!-- <input type="button" value="Chọn tất cả">
-            <input type="button" value="Bỏ chọn tất cả">
-            <input type="button" value="Xóa các mục đã chọn"> -->
-                    <a href="index.php?act=addsp"><input type="button" value="Nhập thêm"></a>
+                    <input type="button" value="Bỏ chọn tất cả">
+                    <input type="button" value="Xóa các mục đã chọn"> -->
+                    <a class="btn btn-primary m-1 w-25" href="index.php?act=addsp">NHẬP THÊM</a>
                 </div>
 
             </div>

@@ -61,7 +61,7 @@
                 <!-- <input type="button" value="Chọn tất cả">
                 <input type="button" value="Bỏ chọn tất cả">
                 <input type="button" value="Xóa các mục đã chọn"> -->
-                <a href="index.php?act=<?php if (isset($urladd) && ($urladd != "")) echo $urladd; ?>"><input type="button" value="Nhập thêm"></a>
+                <a class="btn btn-primary m-1 w-25" href="index.php?act=<?php if (isset($urladd) && ($urladd != "")) echo $urladd; ?>">NHẬP THÊM</a>
             </div>
 
         </div>
