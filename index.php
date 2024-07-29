@@ -19,13 +19,13 @@ include "model/sach.php";
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
-        // case 'gioithieu':
-        //     include "view/gioithieu.php";
-        //     break;
+            // case 'gioithieu':
+            //     include "view/gioithieu.php";
+            //     break;
 
-        // case 'lienhe':
-        //     include "view/lienhe.php";
-        //     break;
+            // case 'lienhe':
+            //     include "view/lienhe.php";
+            //     break;
 
             // case 'sanpham':
             //     if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
@@ -218,9 +218,13 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "./view/shop.php";
             break;
 
-        // case 'viewcart':
-        //     include "view/cart/viewcart.php";
-        //     break;
+        case 'cart':
+            include "./view/cart.php";
+            break;
+
+            // case 'viewcart':
+            //     include "view/cart/viewcart.php";
+            //     break;
 
         default:
             include "view/home.php";
