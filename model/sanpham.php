@@ -97,4 +97,16 @@
         pdo_execute($sql);
     }
 
+    function load_single_pdt($id){
+        $sql = "select * from product where status  = 'active' and id = $id ";
+        $single =pdo_query_one($sql);
+        return $single;
+    }
+
+    function load_pdt_detail($id_pdt){
+        $sql = "select * from product where status  = 'active' and id_pdt = $id_pdt ";
+        $pdt_detail =pdo_query_one($sql);
+        return $pdt_detail;
+    }
+
 ?>

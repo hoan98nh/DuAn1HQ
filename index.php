@@ -222,6 +222,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "./view/cart.php";
             break;
 
+        case 'product-detail':
+            include "./view/single-product.php";
+            break;
             // case 'viewcart':
             //     include "view/cart/viewcart.php";
             //     break;
