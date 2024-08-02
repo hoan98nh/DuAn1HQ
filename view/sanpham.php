@@ -2,7 +2,7 @@
 <div class="row mb ">
     <div class="boxtrai mr ">
         <div class="row mb">              
-            <div class="boxtitle">SẢN PHẨM <?=$tendm?></div>
+            <div class="boxtitle">SHOP<?=$tendm?></div>
                 <div class="boxcontent row ">
                         <?php
                             $i=0;

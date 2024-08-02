@@ -26,29 +26,29 @@
         
     }
 
-    function insert_sanpham($id_cate,$name_product,$detail_product) {
+    function insert_product($id_cate,$name_product,$detail_product) {
         $sql="insert into product(id_cate, name_product, detail_product) 
         values($id_cate,'$name_product', '$detail_product')";
         pdo_execute($sql);
     }
 
-    function delete_sanpham($id) {
-        // $sql="delete from sanpham where id=".$id;
+    function delete_product($id) {
+        // $sql="delete from product where id=".$id;
         $sql="update product set status = 0 where id=".$id;
         pdo_execute($sql);
     }
 
-    function loadall_sanpham_home() {
+    function loadall_product_home() {
         $sql="select * from product where 1 order by id desc limit 0,9"; 
         $listsanpham=pdo_query($sql);
         return $listsanpham;  
     }
 
-    function loadall_sanpham_top10() {
-        $sql="select * from product where 1 order by luotxem desc limit 0,10"; 
-        $listsanpham=pdo_query($sql);
-        return $listsanpham; 
-    }
+    //function loadall_product_top10() {
+        //$sql="select * from product where 1 order by luotxem desc limit 0,10"; 
+        //$listsanpham=pdo_query($sql);
+        //return $listsanpham; 
+    //}
 
     function loadall_sanpham($kyw="",$iddm=0) {
         $sql="select * from product where 1"; 
@@ -76,24 +76,25 @@
     }
 
     // sp chi tiết
-    function loadone_sanpham($id) {
+    function loadone_product($id) {
         $sql="select * from product where id=".$id;
         $sp=pdo_query_one($sql);
         return $sp;
     }
 
     // sp cùng loại
-    function load_sanpham_cungloai($id,$iddm) {
+    function load_product_cungloai($id,$iddm) {
         $sql="select * from product where iddm=".$iddm." AND id <> ".$id;
         $listsanpham=pdo_query($sql);
         return $listsanpham; 
     }
 
-    function update_sanpham($id,$iddm,$tensp,$giasp,$mota,$hinh) {
-        if($hinh!="")
-            $sql="update product set iddm='".$iddm."', name='".$tensp."', price='".$giasp."', mota='".$mota."', img='".$hinh."' where id=".$id;
+
+    function update_product($id,$id_cate,$name_product,$img_pdt,$detail_product) {
+        if($img_pdt!="")
+            $sql="update product set id_cate='".$id_cate."', name_product='".$name_product."', detail_product='".$detail_product."', img_pdt ='".$img_pdt."' where id=".$id;
         else 
-            $sql="update product set iddm='".$iddm."', name='".$tensp."', price='".$giasp."', mota='".$mota."' where id=".$id;
+            $sql="update product set id_cate='".$id_cate."', name_product='".$name_product."', detail_product='".$detail_product."' where id=".$id;
         pdo_execute($sql);
     }
 
@@ -108,5 +109,12 @@
         $pdt_detail =pdo_query_one($sql);
         return $pdt_detail;
     }
+    //function update_product($id,$iddm,$tensp,$giasp,$mota,$hinh) {
+        //if($hinh!="")
+            //$sql="update product set iddm='".$iddm."', name='".$tensp."', price='".$giasp."', mota='".$mota."', img='".$hinh."' where id=".$id;
+        //else 
+            //$sql="update product set iddm='".$iddm."', name='".$tensp."', price='".$giasp."', mota='".$mota."' where id=".$id;
+        //pdo_execute($sql);
+    //}
 
 ?>

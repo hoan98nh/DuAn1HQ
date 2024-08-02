@@ -57,7 +57,7 @@
 
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
-						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo"><img src="./theme/logohq.PNG"></a></div>
+						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo"><img src="./theme/logohqfooter.PNG"></a></div>
 						<p class="mb-4">© 2017 Công Ty Cổ Phần Vàng Bạc Đá HQ 
 							<br>170E Phan Đăng Lưu, P.3, Q.Nam Từ Liêm, TP.Hà Nội
 							<br>ĐT: 028 39951703 - Fax: 028 3995 1702

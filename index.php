@@ -225,6 +225,24 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'product-detail':
             include "./view/single-product.php";
             break;
+        case 'sanpham':
+            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                $kyw = $_POST['kyw'];
+                } else {
+                $kyw = "";
+                }
+                if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
+                    $iddm = $_GET['iddm'];
+                } else {
+                    $iddm = 0;
+                }
+                $dssp = loadall_sanpham($kyw, $iddm);
+                $tendm = loadone_ten_dm($iddm);
+                include "view/sanpham.php";
+    
+            break;
+    
+            
             // case 'viewcart':
             //     include "view/cart/viewcart.php";
             //     break;
