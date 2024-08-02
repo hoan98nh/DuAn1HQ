@@ -287,14 +287,14 @@ if (isset($_GET['act'])) {
             break;
             // end
 
-/*SAN PHAM */
+            /*SAN PHAM */
             case 'addsp':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                $iddm = $_POST['iddm'];
-                $tensp = $_POST['tensp'];
-                $giasp = $_POST['giasp'];
-                $mota = $_POST['mota'];
-                $hinh = $_FILES['hinh']['name'];
+                $id_cate = $_POST['id_cate'];
+                $name_product = $_POST['name_product'];
+                //$giasp = $_POST['giasp'];
+                $detail_product = $_POST['detail_product'];
+                $img_pdt = $_FILES['hinh']['name'];
                 $target_dir = "../upload/";
                 $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
 
@@ -304,8 +304,8 @@ if (isset($_GET['act'])) {
                     //echo "Sorry, there was an error uploading your file.";
                 }
 
-                insert_sanpham($tensp, $giasp, $hinh, $mota, $iddm);
-                $thongbao = "Them thanh cong";
+                insert_product($id_cate,$name_product,$detail_product);
+                $thongbao = "Thêm thành công";
             }
 
             $listdanhmuc = loadall_category();
@@ -352,12 +352,10 @@ if (isset($_GET['act'])) {
 
         case 'updatesp':
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                $id = $_POST['id'];
-                $iddm = $_POST['iddm'];
-                $tensp = $_POST['tensp'];
-                $giasp = $_POST['giasp'];
-                $mota = $_POST['mota'];
-                $hinh = $_FILES['hinh']['name'];
+                $id_cate = $_POST['id_cate'];
+                $name_product = $_POST['name_product'];
+                $detail_product = $_POST['detail_product'];
+                $img_pdt = $_FILES['hinh']['name'];
                 $target_dir = "../upload/";
                 $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
 
@@ -367,11 +365,11 @@ if (isset($_GET['act'])) {
                     // echo "Sorry, there was an error uploading your file.";
                 }
 
-                insert_sanpham($id, $iddm, $tensp, $giasp, $mota, $hinh);
+                insert_product($id_cate,$name_product,$detail_product);
                 $thongbao = "Cập nhật  thành công";
             }
-            $listdanhmuc = loadall_danhmuc();
-            $listsanpham = loadall_sanpham("", 0);
+            $listdanhmuc = loadall_category();
+            $listsanpham = loadall_product("", 0);
             include "sanpham/list.php";
             break;
 
