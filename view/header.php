@@ -1,28 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dự án mẫu</title>
-    <link rel="stylesheet" href="view/css/style.css">
-</head>
-<body>
-    <div class="boxcenter">
-        <div class="row mb header">
-           <h1>SIÊU THỊ TRỰC TUYẾN</h1> 
-        </div>
-        <div class="row mb menu">
-            <ul>
-                <li><a href="index.php">Trang chủ</a></li>
-                <li><a href="index.php?act=gioithieu">Giới thiệu</a></li>
-                <li><a href="index.php?act=lienhe">Liên hệ</a></li>
-                <li><a href="index.php?act=gopy">Góp ý</a></li>
-                <li><a href="index.php?act=hoidap">Hỏi đáp</a></li>
-                <li><a href="index.php?act=sach">Sách</a></li>
-
-            </ul>
-</div> -->
-
 <!doctype html>
 <html lang="en">
 
@@ -57,18 +32,40 @@
 
             <div class="collapse navbar-collapse" id="navbarsFurni">
                 <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Trang chủ</a>
                     </li>
-                    <li><a class="nav-link" href="index.php?act=shop">Shop</a></li>
-                    <li><a class="nav-link" href="about.html">About us</a></li>
-                    <li><a class="nav-link" href="services.html">Services</a></li>
-                    <li><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li><a class="nav-link" href="./view/contact.php">Contact us</a></li>
+                    <li><a class="nav-link" href="index.php?act=shop">Cửa Hàng</a></li>
+                    <li><a class="nav-link" href="#">Về chúng tôi</a></li>
+                    <!-- <li><a class="nav-link" href="services.html">Services</a></li> -->
+                    <li><a class="nav-link" href="#">Blog</a></li>
+                    <li><a class="nav-link" href="./view/contact.php">Liên Hệ</a></li>
                 </ul>
 
-                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                    <li><a class="nav-link" href="#"><img src="./view/asset/images/user.svg"></a></li>
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5 align-items-center">
+                    <?php
+                    if (isset($_SESSION["username"]) && ($_SESSION["username"] != "")) {
+                    ?>
+                        <li>
+                            <img src="./view/asset/images/user.svg">
+                        </li>
+                        <li class="">
+                            <span class="text-white fs-6">
+                                <?= $_SESSION["username"] ?>
+                            </span>
+                        </li>
+                        <li class="px-2">
+                            <span class="ps-1">
+                                <a href="index.php?act=logout" class="text-warning">Đăng xuất</a>
+                            </span>
+                        </li>
+                    <?php
+                    } else {
+                    ?>
+                        <li><a class="nav-link" href="index.php?act=loginpage"><img src="./view/asset/images/user.svg"></a></li>
+                    <?php
+                    }
+                    ?>
                     <li><a class="nav-link" href="index.php?act=cart"><img src="./view/asset/images/cart.svg"></a></li>
                 </ul>
             </div>

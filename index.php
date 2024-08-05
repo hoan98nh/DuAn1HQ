@@ -1,5 +1,6 @@
 
 <?php
+ob_start();
 session_start();
 include "model/pdo.php";
 include "model/sanpham.php";
@@ -215,6 +216,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             //     break;
 
         case 'shop':
+
             include "./view/shop.php";
             break;
 
@@ -228,21 +230,56 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'sanpham':
             if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
                 $kyw = $_POST['kyw'];
-                } else {
+            } else {
                 $kyw = "";
-                }
-                if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
-                    $iddm = $_GET['iddm'];
-                } else {
-                    $iddm = 0;
-                }
-                $dssp = loadall_sanpham($kyw, $iddm);
-                $tendm = loadone_ten_dm($iddm);
-                include "view/sanpham.php";
-    
+            }
+            if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
+                $iddm = $_GET['iddm'];
+            } else {
+                $iddm = 0;
+            }
+            $dssp = loadall_sanpham($kyw, $iddm);
+            $tendm = loadone_ten_dm($iddm);
+            include "view/sanpham.php";
+
             break;
-    
-            
+
+        case 'loginpage':
+            include "./view/login.php";
+            break;
+
+        case 'login':
+            if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
+                $user = $_POST['username'];
+                $pass = $_POST['password'];
+                unset($_SESSION["error"]);
+                $checkUser = checkUser1($user, $pass);
+                var_dump($checkUser);
+                var_dump(checkUser1($user, $pass));
+                if ($checkUser == true) {
+                    $_SESSION["username"] = $checkUser['username'];
+                    $_SESSION["role"] = $checkUser['id_role'];
+                    header("Location: index.php?act=logined");
+                } else {
+                    $error = "thong tin dang nhap ko dung";
+                    $_SESSION["error"] = $error;
+                    header("Location: index.php?act=loginedFail");
+                }
+            }
+            break;
+        case "logined":
+            header("Location: index.php");
+            break;
+        case "loginedFail":
+            header("Location: index.php?login");
+            break;
+        case "logout":
+            unset($_SESSION["username"]);
+            unset($_SESSION["role"]);
+
+            header("Location: index.php");
+            break;
+
             // case 'viewcart':
             //     include "view/cart/viewcart.php";
             //     break;

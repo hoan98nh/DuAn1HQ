@@ -12,6 +12,11 @@
         $sp=pdo_query_one($sql);
         return $sp;
     }
+    function checkUser1($user, $pass){
+        $sql = "select * from user where username = '$user' && password = '$pass' " ;
+        $userlogin = pdo_query_one($sql);
+        return $userlogin;
+    }
 
     function update_taikhoan($id,$user,$pass,$email,$address,$tel) {
             $sql="update taikhoan set user='".$user."',pass='".$pass."',email='".$email."',address='".$address."',tel='".$tel."' where id=".$id;

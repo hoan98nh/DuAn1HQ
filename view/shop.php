@@ -6,7 +6,7 @@
 				<div class="intro-excerpt">
 					<h1>Shop</h1>
 					<p class="mb-4">Rất vui được đón tiếp quý khách đến với cửa hàng trang sức của chúng tôi. Tại đây, chúng tôi tự hào giới thiệu đến quý khách những sản phẩm trang sức cao cấp, độc đáo và được thiết kế tinh tế. Mời quý khách thoải mái tham quan và lựa chọn những món trang sức ưng ý.</p>
-					<p><a href="" class="btn btn-secondary me-2">Mua ngay</a><a href="#" class="btn btn-white-outline">Xem thêm</a></p>
+					<!-- <p><a href="" class="btn btn-secondary me-2">Mua ngay</a><a href="#" class="btn btn-white-outline">Xem thêm</a></p> -->
 				</div>
 			</div>
 			<div class="col-lg-7">

@@ -17,7 +17,7 @@
         // ";
 
         $sql =  "select 
-        product.id, product.name_product, category.name_cate, product.img_pdt, product.detail_product  
+        product.id, product.name_product, category.name_cate, product.img_pdt, product.detail_product, product.status  
         from product
         inner join category on category.id = product.id_cate
         order by product.id asc";
@@ -109,6 +109,72 @@
         $pdt_detail =pdo_query_one($sql);
         return $pdt_detail;
     }
+
+    function insert_product_table($id_cate,$name_product, $img_pdt,$detail_product) {
+        $sql="insert into product(id, id_cate, name_product, img_pdt, detail_product, status) 
+        values('', $id_cate,'$name_product', ' $img_pdt', '$detail_product', 'active')";
+        pdo_execute($sql);
+    }
+    function insert_product_detail2($name_pdtdetail, $id_pdt, $id_size,$id_color, $id_material, $image_pd,$quantity, $price) {
+        $sql="insert into product_detail(id, name_pdtdetail, id_pdt, id_size, id_color, id_material, image_pd, quantity, price, status) 
+        values('', '$name_pdtdetail',$id_pdt, $id_size, $id_color, $id_material, '$image_pd',$quantity, $price, 'active')";
+        pdo_execute($sql);
+    }
+
+    function insert_product_detail($name_pdtdetail, $id_pdt, $id_size,$id_color, $id_material, $image_pd, $price) {
+        $sql="insert into product_detail(id, name_pdtdetail, id_pdt, id_size, id_color, id_material, image_pd, price, status) 
+        values('', '$name_pdtdetail',$id_pdt, $id_size, $id_color, $id_material, '$image_pd', $price, 'active')";
+        pdo_execute($sql);
+    }
+
+    function lastId($table){
+        $sql = "select id from $table order by id desc limit 1";
+        $lastId = pdo_query($sql);
+        return $lastId;
+    }
+
+    function loadall_product_detail($id_pdt){
+        $sql = "SELECT 
+        product_detail.id, product_detail.name_pdtdetail, size.name_size, color.name_color, material.name_material, product_detail.image_pd, product_detail.quantity, product_detail.price, product_detail.status
+        from 
+        product_detail
+        INNER JOIN size on product_detail.id_size  = size.id
+        INNER JOIN color on product_detail.id_color = color.id 
+        INNER JOIN material on product_detail.id_material = material.id
+        where product_detail.id_pdt = $id_pdt
+        order by product_detail.id asc
+        ";
+        $listpdtdetail=pdo_query($sql);
+        return $listpdtdetail;  
+    }
+
+    function loadone_producttable($id){
+        $sql = "SELECT * from product where id = $id";
+        $onefrompdt =pdo_query_one($sql);
+        return $onefrompdt;
+    }
+
+
+    function update_tb_pdt($id, $id_cate, $name_product, $img_pdt, $detail_product, $status){
+        $sql = "UPDATE product set id_cate = '" . $id_cate . "', name_product ='" . $name_product . "', img_pdt = '" . $img_pdt . "', detail_product = '" . $detail_product . "', status ='" . $status . "'
+        where id =" . $id;
+        pdo_execute($sql);
+    }
+
+    function loadone_productDetailtable($id){
+        $sql = "SELECT * from product_detail where id = $id";
+        $onefrompdt = pdo_query_one($sql);
+        return $onefrompdt;
+    }
+
+    function update_tb_pdtdetail($id, $name_pdtdetail,$id_size, $id_color, $id_material, $image_pd, $quantity,$price, $status){
+        $sql = "UPDATE product_detail set name_pdtdetail = '" . $name_pdtdetail . "', id_size ='" . $id_size . "', id_color ='" . $id_color . "', id_material ='" . $id_material . "', image_pd = '" . $image_pd . "', quantity = '" . $quantity . "',price = '" . $price . "', status ='" . $status . "'
+        where id =" . $id;
+        pdo_execute($sql);
+    }
+
+
+
     //function update_product($id,$iddm,$tensp,$giasp,$mota,$hinh) {
         //if($hinh!="")
             //$sql="update product set iddm='".$iddm."', name='".$tensp."', price='".$giasp."', mota='".$mota."', img='".$hinh."' where id=".$id;
