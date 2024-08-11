@@ -1,0 +1,10 @@
+.pdt_img{
+    max-height: 306px;
+}
+#shopBox .product-item .pdt_img{
+    max-height: 306px;
+}
+
+.soLuong .amountBtn{
+    padding: 5px 10px;
+}

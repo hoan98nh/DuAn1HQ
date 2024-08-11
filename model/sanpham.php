@@ -153,7 +153,11 @@
         $onefrompdt =pdo_query_one($sql);
         return $onefrompdt;
     }
-
+    function load_pdt_detail_of_one($id_pdt){
+        $sql = "SELECT * from product_detail where id_pdt = $id_pdt and status = 'active'";
+        $listDetail =pdo_query($sql);
+        return $listDetail;
+    }
 
     function update_tb_pdt($id, $id_cate, $name_product, $img_pdt, $detail_product, $status){
         $sql = "UPDATE product set id_cate = '" . $id_cate . "', name_product ='" . $name_product . "', img_pdt = '" . $img_pdt . "', detail_product = '" . $detail_product . "', status ='" . $status . "'
@@ -173,7 +177,24 @@
         pdo_execute($sql);
     }
 
+    function loadadd_product_fe(){
+        $sql =  "select * from product where status = 'active'";
+        $listsanpham=pdo_query($sql);
+        return $listsanpham;  
+    }
 
+    function loadprice_pdtdetail($id_pdt){
+        $sql = "SELECT price from product_detail where id_pdt = $id_pdt";
+        $priceList=pdo_query($sql);
+        return $priceList;
+    }
+
+    
+    function loadadd_product_home(){
+        $sql =  "SELECT * from product where status = 'active' order by RAND()  limit 3 ";
+        $listsanphamHome=pdo_query($sql);
+        return $listsanphamHome;  
+    }
 
     //function update_product($id,$iddm,$tensp,$giasp,$mota,$hinh) {
         //if($hinh!="")

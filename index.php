@@ -216,7 +216,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             //     break;
 
         case 'shop':
-
+            $listsanpham = loadadd_product_fe();
             include "./view/shop.php";
             break;
 
@@ -224,8 +224,14 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "./view/cart.php";
             break;
 
-        case 'product-detail':
-            include "./view/single-product.php";
+        case 'produc_detail':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $product = loadone_producttable($_GET['id']);
+                // var_dump($product);
+                include "./view/single-product.php";
+            } else {
+                header("Location: index.php");
+            }
             break;
         case 'sanpham':
             if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
@@ -245,6 +251,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
 
         case 'loginpage':
+            unset($_SESSION["error"]);
             include "./view/login.php";
             break;
 
@@ -261,7 +268,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                     $_SESSION["role"] = $checkUser['id_role'];
                     header("Location: index.php?act=logined");
                 } else {
-                    $error = "thong tin dang nhap ko dung";
+                    $error = "Thông tin đăng nhập không đúng";
                     $_SESSION["error"] = $error;
                     header("Location: index.php?act=loginedFail");
                 }
@@ -271,7 +278,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             header("Location: index.php");
             break;
         case "loginedFail":
-            header("Location: index.php?login");
+            include "./view/login.php";
             break;
         case "logout":
             unset($_SESSION["username"]);
@@ -279,7 +286,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
             header("Location: index.php");
             break;
-
+        case "contact":
+            include "view/contact.php";
+            break;
             // case 'viewcart':
             //     include "view/cart/viewcart.php";
             //     break;

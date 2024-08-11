@@ -35,8 +35,51 @@
     			</div>
     			<!-- End Column 1 -->
 
+    			<?php
+				$listsanphamHome  = loadadd_product_home();
+				foreach ($listsanphamHome as $sanpham) {
+					extract($sanpham);
+				?>
+    				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+    					<a class="product-item" href="index.php?act=produc_detail&id=<?=$id?>">
+    						<img src="./upload/<?= $img_pdt ?>" class="img-fluid product-thumbnail pdt_img">
+    						<h3 class="product-title"><?= $name_product ?></h3>
+    						<strong class="product-price">
+    							<?php
+								$id_pdt = $id;
+								$priceList = loadprice_pdtdetail($id_pdt);
+								$count = sizeof($priceList);
+								if ($count == 1) {
+									$price  =  $priceList[0][0];
+								?>
+    								<span><?= $price ?>đ</span>
+    							<?php
+								}
+								if ($count > 1) {
+									$priceRange = array_column($priceList, 'price');
+									$min = min($priceRange);
+									$max = max($priceRange);
+								?>
+    								<span><?= $min ?>đ - <?= $max ?>đ</span>
+    							<?php
+								}
+								// var_dump(($priceList));
+								// var_dump((sizeof($priceList)));
+								// var_dump ($count);
+								?>
+    							<!-- $50.00 -->
+    						</strong>
+
+    						<span class="icon-cross">
+    							<img src="./view/asset/images/cross.svg" class="img-fluid">
+    						</span>
+    					</a>
+    				</div>
+    			<?php
+				}
+				?>
     			<!-- Start Column 2 -->
-    			<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+    			<!-- <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
     				<a class="product-item" href="cart.html">
     					<img src="./theme/nhan1.png" class="img-fluid product-thumbnail">
     					<h3 class="product-title">Nhẫn Kim cương Vàng trắng 14K</h3>
@@ -46,36 +89,8 @@
     						<img src="./view/asset/images/cross.svg" class="img-fluid">
     					</span>
     				</a>
-    			</div>
+    			</div> -->
     			<!-- End Column 2 -->
-
-    			<!-- Start Column 3 -->
-    			<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-    				<a class="product-item" href="cart.html">
-    					<img src="./theme/nhan2.png" class="img-fluid product-thumbnail">
-    					<h3 class="product-title">Nhẫn cưới Kim cương Vàng Trắng 14K</h3>
-    					<strong class="product-price">$78.00</strong>
-
-    					<span class="icon-cross">
-    						<img src="./view/asset/images/cross.svg" class="img-fluid">
-    					</span>
-    				</a>
-    			</div>
-    			<!-- End Column 3 -->
-
-    			<!-- Start Column 4 -->
-    			<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-    				<a class="product-item" href="cart.html">
-    					<img src="./theme/nhan3.png" class="img-fluid product-thumbnail">
-    					<h3 class="product-title">Nhẫn Kim cương Vàng trắng 14K</h3>
-    					<strong class="product-price">$43.00</strong>
-
-    					<span class="icon-cross">
-    						<img src="./view/asset/images/cross.svg" class="img-fluid">
-    					</span>
-    				</a>
-    			</div>
-    			<!-- End Column 4 -->
 
     		</div>
     	</div>
