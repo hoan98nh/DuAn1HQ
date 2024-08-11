@@ -134,6 +134,10 @@
 		<script src="./theme/furni-1.0.0/js/bootstrap.bundle.min.js"></script>
 		<script src="./theme/furni-1.0.0/js/tiny-slider.js"></script>
 		<script src="./theme/furni-1.0.0/js/custom.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="./view/asset/js/easyzoom.js"></script>
+		<script src="./view/asset/js/swiper.min.js"></script>
+		<script src="./view/asset/custom/js/pdt-gallery.js"></script>
 </body>
 
 </html>
