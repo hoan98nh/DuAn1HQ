@@ -134,7 +134,7 @@
 
 		            <div class="row">
 		              <div class="col-md-12">
-		                <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='checkout.php'">Tiến hành kiểm tra</button>
+		                <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='index.php?act=checkout'">Tiến hành thanh toán</button>
 		              </div>
 		            </div>
 		          </div>

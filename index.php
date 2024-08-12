@@ -115,76 +115,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             //     include "view/taikhoan.php/quenmk.php";
             //     break;
 
-            // case 'sach':
-            //     $listsach = load_all_sach();
-            //     include "view/sach/list.php";
-            //     break;
-
-            // case 'xoa-sach':
-            //     if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-            //         echo "<script>";
-            //         echo "alert('Nhấn ok để thực hiện xóa');";
-            //         echo "</script>";
-            //         delete_sach($_GET['id']);
-            //     }
-            //     $listsach = load_all_sach();
-            //     include "view/sach/list.php";
-            //     break;
-
-            // case 'them-sach':
-            //     var_dump($_POST);
-            //     if (isset($_POST['submitForm'])) {
-            //         $ten_sach = $_POST['ten_sach'];
-            //         $id_nha_xuat_ban = $_POST['id_nha_xuat_ban'];
-            //         $gia = $_POST['gia'];
-            //         $mota = $_POST['mota'];
-
-            //         $hinh_anh = $_FILES['img_upload']['tmp_name'];
-            //         $ten_file_anh = $_FILES['img_upload']['name'];
-            //         $vi_tri_luu = 'img/' . $ten_file_anh;
-
-            //         if (move_uploaded_file($hinh_anh, $vi_tri_luu)) {
-            //             echo "Upload thanh cong";
-            //         } else {
-            //             echo "Upload that bai";
-            //         }
-
-            //         insert_nhaxuatban($ten_sach, $ten_file_anh, $id_nha_xuat_ban, $gia, $mota);
-            //         $thongbao = "Them thanh cong";
-            //     }
-            //     $dsnhaxuatban = load_all_nhaxuatban();
-            //     include "view/sach/create.php";
-            //     break;
-
-            // case 'sua-sach':
-            //     if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-            //         $sach = load_one_sach($_GET['id']);
-
-
-            //         if (isset($_POST['submitForm'])) {
-            //             $ten_sach = $_POST['ten_sach'];
-            //             $id_nha_xuat_ban = $_POST['id_nha_xuat_ban'];
-            //             $gia = $_POST['gia'];
-            //             $mota = $_POST['mota'];
-
-            //             $hinh_anh = $_FILES['img_upload']['tmp_name'];
-            //             $ten_file_anh = $_FILES['img_upload']['name'];
-            //             $vi_tri_luu = 'img/' . $ten_file_anh;
-
-            //             if (move_uploaded_file($hinh_anh, $vi_tri_luu)) {
-            //                 echo "Upload thanh cong";
-            //             } else {
-            //                 echo "Upload that bai";
-            //             }
-
-            //             update_sach($ten_sach, $ten_file_anh, $id_nha_xuat_ban, $gia, $mota);
-            //             $thongbao = "Cập nhật thành công";
-            //         }
-            //     }
-            //     $listsach = load_all_sach();
-            //     $dsnhaxuatban = load_all_nhaxuatban();
-            //     include "view/sach/update.php";
-            //     break;
 
             // case 'thoat':
             //     session_unset();
@@ -218,10 +148,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'shop':
             $listsanpham = loadadd_product_fe();
             include "./view/shop.php";
-            break;
-
-        case 'cart':
-            include "./view/cart.php";
             break;
 
         case 'produc_detail':
@@ -261,10 +187,11 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $pass = $_POST['password'];
                 unset($_SESSION["error"]);
                 $checkUser = checkUser1($user, $pass);
-                var_dump($checkUser);
-                var_dump(checkUser1($user, $pass));
+                // var_dump($checkUser);
+                // var_dump(checkUser1($user, $pass));
                 if ($checkUser == true) {
                     $_SESSION["username"] = $checkUser['username'];
+                    $_SESSION["id"] = $checkUser['id'];
                     $_SESSION["role"] = $checkUser['id_role'];
                     header("Location: index.php?act=logined");
                 } else {
@@ -282,16 +209,82 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
         case "logout":
             unset($_SESSION["username"]);
+            unset($_SESSION["id"]);
             unset($_SESSION["role"]);
 
             header("Location: index.php");
             break;
+
+        case 'signuppage':
+            unset($_SESSION["error"]);
+            include "./view/signup.php";
+            break;
+
+        case 'signup':
+            if (isset($_POST['dangki']) && ($_POST['dangki'])) {
+                $user = $_POST['username'];
+                $pass = $_POST['password'];
+                $sdt = $_POST['tel'];
+                $email = $_POST['email'];
+
+                unset($_SESSION["error"]);
+                $checkEmail = checkemail($email);
+                if ($checkEmail == true) {
+                    $error = "Email đã được sử dụng";
+                    $_SESSION["error"] = $error;
+                    header("Location: index.php?act=signedupFail");
+                } else {
+                    $checkuserName = checkuserName($username);
+                    if ($checkuserNam == true) {
+                        $error = "Tên đăng nhập đã được sử dụng";
+                        $_SESSION["error"] = $error;
+                        header("Location: index.php?act=signedupFail");
+                    } else {
+                        insert_userClient($username, $password, $email, $phone_number);
+                        header("Location: index.php?act=signed");
+                    }
+                }
+            }
+            break;
+
+        case "signed":
+            header("Location: index.php?act=loginpage");
+            break;
+        case "signedupFail":
+            include "./view/signup.php";
+            break;
+
         case "contact":
             include "view/contact.php";
             break;
             // case 'viewcart':
             //     include "view/cart/viewcart.php";
             //     break;
+
+        case 'cart':
+            include "./view/cart.php";
+            break;
+
+        case 'checkout':
+            $nameRecive = "";
+            $addressRecive = "";
+            $emailRecive = "";
+            $telRecive = "";
+            if (isset($_SESSION["id"]) && ($_SESSION["id"] != "")) {
+                $one_user = loadone_user($_SESSION["id"]);
+                extract($one_user);
+                $nameRecive = $username;
+                $addressRecive = $address;
+                $emailRecive =  $email;
+                $telRecive = $phone_number;
+            }
+            include "./view/checkout.php";
+            break;
+
+        case 'thankyou':
+            include "./view/thankyou.php";
+            break;
+
 
         default:
             include "view/home.php";

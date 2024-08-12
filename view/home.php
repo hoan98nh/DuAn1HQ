@@ -6,10 +6,10 @@
     				<div class="intro-excerpt">
     					<h1>Trang Sức HQ <span clsas="d-block"> </span></h1>
     					<p class="mb-4">Rất vui được đón tiếp quý khách đến với cửa hàng trang sức của chúng tôi. Tại đây, chúng tôi tự hào giới thiệu đến quý khách những sản phẩm trang sức cao cấp, độc đáo và được thiết kế tinh tế. Mời quý khách thoải mái tham quan và lựa chọn những món trang sức ưng ý.</p>
-    					<p>
-    						<!-- <a href="" class="btn btn-secondary me-2">Mua ngay</a> -->
+    					<!-- <p>
+    						<a href="" class="btn btn-secondary me-2">Mua ngay</a>
     						<a href="#" class="btn btn-white-outline">Xem thêm</a>
-    					</p>
+    					</p> -->
     				</div>
     			</div>
     			<div class="col-lg-7">
@@ -182,7 +182,7 @@
     					<li>Chúng tôi cam kết mang đến trải nghiệm mua sắm trang sức hoàn hảo cho khách hàng</li>
     					<li>Khách hàng sẽ được tư vấn tận tình và hỗ trợ trong suốt quá trình mua sắm</li>
     				</ul>
-    				<p><a href="index.php?act=shop" class="btn">Xem thêm</a></p>
+    				<!-- <p><a href="index.php?act=shop" class="btn">Xem thêm</a></p> -->
     			</div>
     		</div>
     	</div>

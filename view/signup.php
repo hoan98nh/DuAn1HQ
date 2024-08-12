@@ -8,21 +8,26 @@ if ((!isset($_SESSION["username"]))) {
 
                 <div class="col-md-4">
                     <div class="text-center mb-4">
-                        <h2>Đăng nhập</h2>
+                        <h2>Đăng kí</h2>
                     </div>
                     <form action="index.php?act=login" method="post">
                         <div class="form-group mb-1">
                             <label for="username">Tên đăng nhập</label>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="Tên đăng nhập">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Tên đăng nhập" require>
                         </div>
                         <div class="form-group mb-1">
                             <label for="password">Mật khẩu</label>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Mật khẩu">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Mật khẩu" require>
+                        </div>
+                        <div class="form-group mb-1">
+                            <label for="tel">Số điện thoại</label>
+                            <input type="tel" class="form-control" name="tel" id="username" placeholder="Số điện thoại" require>
                         </div>
                         <div class="form-group mb-3">
-                            <a href="index.php?act=signuppage">Chưa có tài khoản? Đăng kí ngay</a>
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" require>
                         </div>
-                        <input type="submit" class="btn btn-primary" name="dangnhap" value="Đăng nhập">
+                        <input type="submit" class="btn btn-primary" name="dangki" value="Đăng kí">
                     </form>
 
                     <?php
