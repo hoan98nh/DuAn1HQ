@@ -196,10 +196,6 @@
         return $listsanphamHome;  
     }
 
-    function loademailList(){
-        $sql = "SELECT email from user where status =  'active'";
-    }
-
     //function update_product($id,$iddm,$tensp,$giasp,$mota,$hinh) {
         //if($hinh!="")
             //$sql="update product set iddm='".$iddm."', name='".$tensp."', price='".$giasp."', mota='".$mota."', img='".$hinh."' where id=".$id;
