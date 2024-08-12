@@ -509,6 +509,14 @@ if (isset($_SESSION["username"]) && ($_SESSION["username"] != "")) {
                     include "sanpham/update.php";
                     break;
 
+                case 'logout':
+                    unset($_SESSION["username"]);
+                    unset($_SESSION["id"]);
+                    unset($_SESSION["role"]);
+
+                    header("Location: ../index.php");
+                    break;
+
                 default:
                     include "home.php";
                     break;
